@@ -1,6 +1,8 @@
 # summarize-video-course
 
 一个用于把本地课程视频、字幕或逐字稿整理为可读知识资料的 Codex Skill。
+灵感来源：
+https://garden.wangxianglife.top/course-learning-method
 
 ## 内容
 
