@@ -1,4 +1,0 @@
-interface:
-  display_name: "视频课程总结与交付"
-  short_description: "把本地视频课程整理为可读知识资料，并完成可验证交付"
-  default_prompt: "使用 $summarize-video-course 把这批本地课程整理成可读知识资料，并告诉我先看哪一篇。"
