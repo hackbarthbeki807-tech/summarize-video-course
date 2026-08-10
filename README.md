@@ -1,8 +1,10 @@
-# summarize-video-course
+# summarize-video-course v2.8
 
 一个用于把本地课程视频、字幕或逐字稿整理为可读知识资料的 Codex Skill。
 
-## 内容
+v2.8 重点强化了课程笔记结构、案例复盘、金句原话边界、知识点来源标注、批次验收、设备适配和长任务监控。
+
+## 公共版内容
 
 ```text
 summarize-video-course/
@@ -11,11 +13,22 @@ summarize-video-course/
 └─ references/approved-example-template.md
 ```
 
-这个导出包不包含真实课程视频、音频、字幕、逐字稿、模型文件或课程成果。原项目中的真实课程范例没有放入这里，以免把课程内容公开。
+这个仓库只保存通用 Skill 规则，不保存任何真实课程内容。
+
+## 明确不应上传的内容
+
+不要把以下内容放入公开仓库：
+
+- 课程视频、音频、字幕、逐字稿、逻辑稿、知识点卡片和课程成果；
+- 真实课程名称、课时编号、课程文件夹、批次 manifest、运行日志和模型缓存；
+- `media_index.json` 等包含真实文件名、时长、校验值或来源结构的文件；
+- 真实课程范例、客户资料、绝对本地路径、API key、OAuth key、密码或其他凭据。
+
+真实课程范例应保存在本地或私有项目中。通用 Skill 可以公开，课程资料不应随 Skill 一起公开。
 
 ## 安装
 
-把 `summarize-video-course` 文件夹复制到 Codex skills 目录，例如：
+将本仓库克隆或下载到 Codex skills 目录：
 
 ```text
 ~/.codex/skills/summarize-video-course/
@@ -33,22 +46,16 @@ C:\Users\<你的用户名>\.codex\skills\summarize-video-course\
 使用 $summarize-video-course 整理这批本地课程，并告诉我先看哪一篇。
 ```
 
-## GitHub 上传
+## 本地处理边界
 
-推荐把本目录作为一个独立仓库的根目录上传：
+- 默认只读取本地课程源文件，不上传课程内容；
+- 源视频保持只读，不复制、移动、重命名或删除；
+- 临时媒体只能写入本地工作目录；
+- 远程模型、付费 API 和云端存储不属于默认处理路径；
+- 用户验收前不扩大批次，不把报告、文件夹或启动脚本当作课程文章。
 
-```powershell
-cd github-export\summarize-video-course
-git init
-git add .
-git commit -m "feat: add summarize-video-course skill"
-git branch -M main
-git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-git push -u origin main
-```
+## 发布前检查
 
-如果仓库公开，上传前请再次确认没有课程内容、客户资料、模型文件、API key、OAuth key 或本地绝对路径。
+公开仓库提交前，请确认仓库根目录和全部提交历史中都没有课程素材、真实范例、模型文件、本地路径或凭据。`.gitignore` 只能降低误提交概率，不能替代人工检查。
 
-## 私有参考范例
-
-如果需要保留真实课程范例，请放在私有仓库或本地 skill 目录的 `references/` 中，不要放进公开仓库。`SKILL.md` 只要求模仿结构和表达密度，不能把范例事实当成新课程内容。
+本仓库当前未指定开源许可证；如果希望网友合法修改、再发布或商用，请根据你的授权范围另行选择许可证。
