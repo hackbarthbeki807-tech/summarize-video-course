@@ -1,6 +1,6 @@
 # summarize-video-course
 
-一个面向公开使用的本地视频课程整理 Skill，当前公共版为 v3.2。
+一个面向公开使用的本地视频课程整理 Skill，当前公共版为 v3.3。
 
 它将本地课程视频、字幕或逐字稿整理为七项文字资料：
 
@@ -16,13 +16,15 @@
 
 这个目录只包含通用 Skill 规则、通用参考标准和占位示例，不包含任何真实课程视频、音频、字幕、逐字稿、课程笔记、个人路径或内部项目状态。
 
-公共版保留了 v3.2 的核心能力：
+公共版保留了 v3.3 的核心能力：
 
 - “完成”三证据；
 - 逻辑稿人读闸门；
 - 首课同类故障熔断修复；
 - 批内技术修复免重复确认；
 - 三副本同步与可回退检查；
+- 课程结束时的“无下一批”闸门与全课程终检；
+- 唯一 `run_status.json` 状态记录、最终人工确认和课程知识地图；
 - 知识点覆盖清单和动态卡片字段；
 - 无声/纯画面视频分流；
 - 原话、模型整理、意译和重点核对分级；
@@ -37,6 +39,7 @@ references/knowledge-card-standard.md
 references/logic-note-delivery-gate.md
 references/logic-note-example-template.md
 README.md
+VERSION_COMPARISON.md
 ```
 
 ## 使用原则
