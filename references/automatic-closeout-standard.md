@@ -56,6 +56,8 @@ py tools/course_visual_screening.py scan `
 }
 ```
 
+用户接受“保留标注”的资料时，`human_read_verified` 仅代表已阅读，不能推断为已回听来源。整课验收应在来源清单区分 `acceptance_mode`、`unverified_items` 和 `source_recheck_status`；字段与完成后的首页、进度一致性检查见 [验收与协作收尾标准](acceptance-and-efficiency-closeout-standard.md)。
+
 ## 五、生成 AI 目录和人类手册
 
 ```powershell
